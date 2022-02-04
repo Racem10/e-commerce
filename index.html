@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d89aa1e4ce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="js/css/style.css">
+    
+    <title>INFOLAB</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section id="index"></section>
+        <div id="background"></div>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="navbar-toggler-icon"></div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <div class="hover"></div>
+                    <li class="nav-item active">
+                        <a class="nav-link"  href="#all-products">ordinateur portable </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#all-products">ordinateur fix</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#all-products"> smartphone </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <a href="#panier">
+                <span type="badge-pill" class="panier" data-toggle="modal" data-target="#cartModal" id="displayCart">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </span>
+            </a>
+        </nav>
+
+        <!-- Modale Panier -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content background-modal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="text-center">Récapitulatif du panier</h3>
+                        <table class="table table-responsive table-hover" id="cartTable">
+                            <thead>
+                                <tr>
+                                    <th scope="col" width="200" class="text-left">Nom du produit</th>
+                                    <th scope="col" width="200" class="text-left">Référence article</th>
+                                    <th scope="col" width="200" class="text-left">Prix unitaire</th>
+                                    <th scope="col" width="200" class="text-center">Quantité</th>
+                                    <th scope="col" width="200" class="text-center">Total</th>
+                                    <th scope="col" width="200" class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cartTableBody">
+                            </tbody>
+                        </table>
+                        <div>Total TTC : <span id="result"></span> </div>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <a href="ma/formiler.html"> <button id="confirm-command">Passer la commande</button</a></center> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to top -->
+        <div id="scrollTop"></div>
+
+        <!-- Catégorie Accueil - Carrousel -->
+        <div class="row justify-content-center">
+            <h1 class="col-sm text-center mb-4">Bienvenue sur notre societe!</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" role="listBox">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        
+                    </ol>
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            
+                            <div class="opacity">
+                                <img src="ma/ims tout/telef tout.jfif" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <h4> nos smartphones</h4>
+                               
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="opacity">
+                                <img src="ma/images0/p.jfif" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <h4>Nos pc</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="opacity">
+                                <img src="img/HP PRO.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-caption justify-content-center align-items-center">
+                                <h4>Nos ordinateurs fix </h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie Produits -->
+        <div class="products" id="all-products">
+            <div class="row justify-content-center" id="prod">
+                <h1 class="col-sm text-center mt-5 mb-4">Nos produits</h1>
+            </div>
+            <!-- Sous-Catégorie ordinateur portable -->
+            <section id="plantesInt">
+                <div class="row justify-content-center">
+                    <h2 class="col-sm text-center my-5">ordinateur portable </h2>
+                </div>
+                <div class="row justify-content-center" id="housePlant">
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center"> LENOVO  </h3>
+                                <img class="card-img-top btn" src="img/lenovo.jpg"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">1229.000 dt </span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="" class="card-link article" data-ref="ref. 123" data-name="LENOVO" data-price="1229.000 ">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">HP</h3>
+                                <img class="card-img-top btn" src="img/hp.jpg" " type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">1379.000 dt </span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 456" data-name="HP" data-price="1379.000 ">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Asus</h3>
+                                <img class="card-img-top btn" src="img/asus.jpg"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">3099.000 dt </span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 789" data-name="Asus" data-price="3099.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Dell</h3>
+                                <img class="card-img-top btn" src="img/dell.jpg"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text"> 2338.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 112" data-name="Dell" data-price="2338.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Sous-Catégorie ordinateur fix-->
+            <section id="plantesExt">
+                <div class="row justify-content-center">
+                    <h2 class="col-sm text-center my-5">ordinateur fix</h2>
+                </div>
+                <div class="row justify-content-center" id="housePlant">
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">HP PRO</h3>
+                                <img class="card-img-top btn" src="img/HP PRO.jpg"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">969.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="" class="card-link article" data-ref="ref. 345" data-name="HP PRO" data-price="969.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">dell optiplex</h3>
+                                <img class="card-img-top btn" src="img/fix1.jfif"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">989.000 dt </span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 678" data-name="dell optiplex" data-price="989.000 ">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Lenovo V50T</h3>
+                                <img class="card-img-top btn" src="img/v50t.jpg"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">1029.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 901" data-name="lenovo V50T" data-price="1029.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">ACER</h3>
+                                <img class="card-img-top btn" src="img/acer.jpg"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">1159.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 2234" data-name="ACER" data-price="1159.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sous-Catégorie Bouquets de fleurs séchées -->
+            <section id="bouquets">
+                <div class="row justify-content-center">
+                    <h2 class="col-sm text-center my-5">smartphones</h2>
+                </div>
+                <div class="row justify-content-center" id="housePlant">
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">iPhone 12</h3>
+                                <img class="card-img-top btn" src="img/iph.jfif"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">4819.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="" class="card-link article" data-ref="ref. 2567" data-name="iPhone 12" data-price="4819.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Samsung A11</h3>
+                                <img class="card-img-top btn" src="img/a11.jfif"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">529.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 2890" data-name="Samsung A11" data-price="529.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Huawei Y9s </h3>
+                                <img class="card-img-top btn" src="img/hh.jfif"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">789.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 3123" data-name="Huawei Y9s" data-price="789.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Nokia 3.2</h3>
+                                <img class="card-img-top btn" src="img/nokia.jfif"  type="button" data-toggle="modal" data-target="#exampleModal">
+                                <div class="row">
+                                    <div class="col text-left mt-3">
+                                        <span class="card-text">319.000 dt</span>
+                                    </div>
+                                    <div class="col text-right mt-3">
+                                        <a href="#" class="card-link article" data-ref="ref. 3456" data-name="Nokia3.2" data-price="319.000">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Bannière  -->
+        <div class="row justify-content-between text-center my-5">
+            <div class="col-4"><img src="js/img/bestLogo.png">
+                
+             
+        </div>
+    </div>
+
+    <!-- Fenêtre modale de description produit -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Description du produit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">Ecran 15.6" HD LED - Processeur Intel Core i3-1005G1, 3.4 Ghz, 4 Mo de mémoire cache - Mémoire 4 Go - Disque 1 To - Carte graphique Intel UHD Graphics - Wifi - Bluetooth 5.0 - Webcam HD avec Micro - HDMI - USB 3.2 - Couleur Rouge -
+                        Garantie 1 an
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="row">
+                <div class="footerLeft col-lg-4 col-md-4 col-sm-4">
+                    <div id="footerLeft">
+                        <p><i class="fa fa-map-marker"></i>
+                            <span>Adresse: </span>
+                            <p><span>lafran km 6</span></p>
+                            <p><span>Rue 2 Mars</span></p>
+                    </div>
+                    <div>
+                        <p><i class="fa fa-phone"></i> (+216) 50 630 134 </p>
+                        <p><i class="fa fa-phone"></i> (+216) 20 130 289</p>
+                    </div>
+                    <div>
+                        <p><i class="fa fa-envelope"></i>
+                            <a href="#">lazezracem4@gmail.com</a></p>
+
+                        <p> <i class="fa fa-envelope"></i>
+                            <a href="#">ayedihaytham5@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="footerCenter col-lg-4 col-md-4 col-sm-4 text-center">
+                    <div>
+                        <p></p>
+                        <p>
+                            <a href="https://www.facebook.com/racem.lazez.90/"><span><i class="fa fa-facebook fa-2x"></i></span></a>
+                            <a href="https://www.instagram.com/racemlazez/?hl=fr"><span><i class="fa fa-instagram fa-2x"></i></span></a></p>
+                    </div>
+                </div>
+                <div class="footerRight col-lg-4 col-md-4 col-sm-4 justify-content-right align-middle">
+                    <div id=footerRight>
+                        <h2 class="titleFooter text-white" id="titleFooter"><span>INFOLAB</span></h2>
+                        <h4 class="soustitleFooter"><span>Boutique d'informatique </span></h4>
+                        <p class="links">
+                            <a href="#plantesInt">ordinateur portable</a> |
+                            <a href="#plantesExt">ordinateur fix</a> |
+                            <a href="#bouquets">smartphone</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footerBottom col-lg-12 col-md-6 col-sm-8 col-12 text-center">
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/js/script.js"></script>
+
+</body>
+
+</html>

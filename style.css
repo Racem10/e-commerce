@@ -1,0 +1,206 @@
+        h1 {
+            color: Navy;
+            text-align: center;
+            font-size: 40px;
+            font-family: Times New Roman;
+        }
+        
+        .y {
+            color: FireBrick;
+        }
+        
+        .c {
+            background: LightCyan;
+        }
+        
+        .pos1 {
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            font-size: 70px;
+            text-decoration: underline;
+            font-style: italic;
+            padding-left: 70px;
+        }
+        
+        .p1 {
+            color: CadetBlue;
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .v {
+            font-weight: bold;
+            margin-right: 340px;
+            text-decoration: underline;
+        }
+        
+        table {
+            text-align: center;
+            margin-left: 50px;
+            background-color: White;
+            border-color: DarkSlateBlue;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding-left: 70px;
+            height: 50px;
+            vertical-align: bottom;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .liste {
+            color: MidnightBlue;
+            font-style: italic;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        .ici {
+            font-size: 30px;
+            color: Red;
+        }
+        
+        h2 {
+            font-weight: bold;
+            color: Crimson;
+            text-align: center;
+            font-size: 40px;
+            font-family: Times New Roman;
+            padding-left: 70px;
+            text-decoration: underline;
+        }
+        
+        .b {
+            text-decoration: line-through;
+        }
+        
+        .b0 {
+            color: red;
+            font-weight: bold;
+        }
+        
+        .cici {
+            font-size: 25px;
+            color: Red;
+        }
+        
+        img {
+            border-radius: 8px;
+        }
+        
+        .button {
+            background-color: LightCoral;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        
+        <!--rech-->label {
+            display: block;
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+        
+        input,
+        label {
+            margin: .4rem 0;
+        }
+        
+        .rech {
+            font-size: 30px;
+            color: DarkRed;
+        }
+        
+        .bt {
+            background-color: AliceBlue;
+            color: DarkRed;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        
+        em {
+            font-weight: bold;
+            font-style: normal;
+            color: #f00;
+        }
+        
+        label {
+            font-weight: bold;
+            color: #0A0A0A;
+            width: 210px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 6px;
+        }
+        
+        .email {
+            width: 254px;
+        }
+        
+        .text {
+            height: 60px;
+        }
+        
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        
+        legend {
+            color: #15D79E;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Times New Roman;
+        }
+        
+        .mer {
+            font-size: 80px;
+            text-align: center;
+        }
+        
+        label1 {
+            font-weight: bold;
+            color: #0A0A0A;
+            width: 160px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 8px;
+        }
+        
+        .sel {
+            width: 254px;
+            height: 35px;
+            font-family: Times New Roman;
+            font-size: 30px;
+            font-weight: bold;
+            color: DarkRed;
+            margin: 8px;
+        }
+        
+        .ord {
+            float: right;
+        }
+        
+        .dropdown:hover>#cart-dropdown {
+            display: block;
+        }
+        
+        .pan {
+            width: 20px;
+            float: left;
+        }
